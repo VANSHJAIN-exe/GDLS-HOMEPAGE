@@ -1,0 +1,191 @@
+:root {
+    --header: #1e1e1e;
+    --txtcolor: rgb(249, 249, 249);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+body{
+    overflow-x: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--header);
+}
+
+.maine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main p{
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--txtcolor);
+    margin-top: 20px;
+    text-align: center;
+}
+.des{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.wel {
+    margin-top: 100px;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--txtcolor);
+}
+
+.main-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+    font-size: 60px;
+    color: var(--txtcolor);
+}
+
+.header {
+    background-color: var(--header);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+.header img {
+    width: 30vmin;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+ul li {
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--txtcolor);
+}
+ul li::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+ul li:hover {
+    opacity: 0.6;
+}
+ul li:hover::after{
+    width: 100%;
+}
+
+button {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 1em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+}
+
+button:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 rgb(255, 255, 255);
+}
+
+;
+
+button:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+}
+
+.buttonn{
+    margin-top: 20px;
+}
+footer{
+    height: 50vh;
+    background-color: #000000;
+    margin-top: 100px;
+    width: 100vw;
+}
+.footer{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    height: 50%;
+}
+.footer a{
+    font-size: 40px;
+    color: white;
+    padding: 6px 16px;
+    border: 2px solid white;
+    box-shadow: 5px 6px 0px 0px white;
+}
+.footer a:hover{
+    transform:scale(1.1);
+    transition: 0.5s;
+}
+.sperate{
+    height: 0.3px;
+    width: 100vw;
+    background-color: #ffffff57;
+    margin-top: 110px;
+}
+.txt{
+    height: 10vh;
+    display: flex;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
