@@ -10,7 +10,7 @@ function glitchEffect() {
     var glitchedText = "";
 
     for (var i = 0; i < glitchText.length; i++) {
-        if (Math.random() < 0.05) { // Adjust probability for more or less glitch
+        if (Math.random() < 0.04) { // Adjust probability for more or less glitch
             glitchedText += String.fromCharCode(Math.floor(Math.random() * (126 - 33 + 1)) + 33); // Random printable ASCII characters
         } else {
             glitchedText += glitchText[i];
