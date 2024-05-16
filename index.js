@@ -20,4 +20,4 @@ function glitchEffect() {
     document.querySelector(".auto-type").textContent = glitchedText;
 }
 
-setInterval(glitchEffect, 200); // Adjust interval for glitch effect speed
+setInterval(glitchEffect, 195); // Adjust interval for glitch effect speed
