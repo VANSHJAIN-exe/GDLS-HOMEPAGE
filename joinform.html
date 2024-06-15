@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="stylesheet" href="joinform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="header">
+        <header>
+            <div class="header">
+                <img src="5.png" alt="Logo">
+                <div class="header-list">
+                    <ul>
+                        <a href="index.html">
+                            <li>HOME</li>
+                        </a>
+
+                        <a href="join.html">
+                            <li>JOIN</li>
+                        </a>
+                        <a href="achievements.html">
+                            <li>ACHIEVEMENTS</li>
+                        </a>
+                        <a href="team.html">
+                            <li>TEAM</li>
+                        </a>
+                        <button>
+                            MISSION
+                        </button>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="contactform">
+        <form action="#" ; onsubmit="sendEmail(); reset(); return false;">
+            <h1>GDLS JOIN FORM</h1>
+            <input type="text" id="firstname" placeholder="First Name" required>
+            <input type="text" id="lastname" placeholder="Last Name" required>
+            <input type="email" id="Email" placeholder="Email" required>
+            <textarea id="textarea" placeholder="WHY DO YOU WANT TO JOIN THE TEAM?" rows="15" cols="55"></textarea>
+            <button id="btn" type="button" value="button" onclick="sendEmail()">SUMBIT</button>
+
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <a href="https://www.instagram.com/gdls.0522__/?theme=dark"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/GDLS0522"><i class="fa-brands fa-github"></i></a>
+            <a target="_blank" rel="nofollow noreferrer" href=" https://ctftime.org/team/193637"><img
+                    alt="CTFTime Profile" loading="lazy" width="90" height="25" decoding="async" data-nimg="1"
+                    class="cursor-pointer filter-none" style="color:transparent" src="/ctftime.svg"></a>
+        </div>
+        <div class="sperate">
+
+        </div>
+        </div>
+        <div class="txt">
+            Copyright © Gang de la Sinfonia
+        </div>
+    </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+
+
+        function sendEmail() {
+            let firstname = document.getElementById("firstname").value;
+            let lastname = document.getElementById("lastname").value;
+            let email = document.getElementById("Email").value;
+            let textarea = document.getElementById("textarea").value;
+
+            let message1 = "First Name " + " = " + firstname +
+                "<br/>  Last Name " + " = " + lastname +
+                "<br/>  Email ID " + " = " + email +
+                "<br/> Reason of Joining :" +
+                "<br/>" + textarea;
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "gdls.0522@gmail.com",
+                Password: "253009F3F79629D0E2E42B414787E873D02F",
+                To: 'gdls.0522@gmail.com',
+                From: "gdls.0522@gmail.com",
+                Subject: "This is the subject",
+                Body: message1
+            }).then(
+                message => {
+                    if (message == 'OK') {
+                        Swal.fire({
+                            title: "Succesful!",
+                            text: "Your form has been submitted succesfully",
+                            icon: "success"
+                        });
+                    }
+                    else {
+                        Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Something went wrong!",
+                        });
+                    }
+                }
+            );
+        }
+
+        function reload() {
+            const button = document.getElementById("btn")
+            button.addEventListener("click", () => {
+                window.location.reload();
+            })
+        }
+
+
+    </script>
+</body>
+
+</html>
