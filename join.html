@@ -69,25 +69,27 @@
         <div class="txt">
             Copyright © Gang de la Sinfonia
         </div>
-          <button id="backtotop"><i class="fa-solid fa-arrow-up"></i></button>
+        <button id="backtotop"><i class="fa-solid fa-arrow-up"></i></button>
     </footer>
+
 
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/c1f398ef94.js" crossorigin="anonymous"></script>
 
     <script>
         function sendEmail() {
-           Email.send({
-           Host: "smtp.elasticemail.com",
-           Username: "gdls.0522@gmail.com",
-           Password: "253009F3F79629D0E2E42B414787E873D02F",
-           To: 'gdls.0522@gmail.com',
-           From: "gdls.0522@gmail.com",
-           Subject: "This is the subject",
-           Body: "And this is the body"
-       }).then(
-        message => {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "gdls.0522@gmail.com",
+                Password: "253009F3F79629D0E2E42B414787E873D02F",
+                To: 'gdls.0522@gmail.com',
+                From: "gdls.0522@gmail.com",
+                Subject: "This is the subject",
+                Body: "And this is the body"
+            }).then(
+                message => {
                     if (message == 'OK') {
                         Swal.fire({
                             title: "Succesful!",
@@ -99,13 +101,13 @@
                         Swal.fire({
                             icon: "error",
                             title: "Oops...",
-                            text: "Something went wrong!",f
+                            text: "Something went wrong!", f
                         });
                     }
                 }
             );
         }
-                let mybutton = document.getElementById("backtotop");
+        let mybutton = document.getElementById("backtotop");
 
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function () {
@@ -129,9 +131,6 @@
 
 
     </script>
-        
-     
-        
-    </script>
 </body>
+
 </html>
